@@ -22,8 +22,11 @@ public class RandomNumber {
 			// Guess stuff
 			int guess = input.nextInt();
 
-			if (guess < 0 || guess > 100) {
+			if (guess == number1 && guesses == 0) {
+				JOptionPane.showMessageDialog(null, "Wow you got it first try!");
+			} else if (guess < 0 || guess > 100) {
 				System.out.println("Your guess should be from 0 - 100\n");
+				guesses = guesses - 1;
 			} else if (guess == number1) {
 				JOptionPane.showMessageDialog(null, "Good job! You guessed the number!");
 				break;
@@ -33,6 +36,8 @@ public class RandomNumber {
 			} else if (guess > number1) {
 				System.out.println("Too high, try again");
 				System.out.println("You have " + (9 - guesses) + " guesses left\n");
+			} else if (guess == 0) {
+				System.out.println("You couldn't guess the number");
 			}
 		}
 	}
