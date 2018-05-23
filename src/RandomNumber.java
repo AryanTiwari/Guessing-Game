@@ -13,7 +13,6 @@ public class RandomNumber {
 		int number1 = number.nextInt(100) + 0;
 
 		// Guess the number
-		System.out.println(number1);
 		System.out.println("Guess a number from 0 - 100");
 
 		// Guess loop
