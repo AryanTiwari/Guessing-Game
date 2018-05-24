@@ -10,8 +10,9 @@ public class RandomNumber {
 
 		// Make random number
 		Random number = new Random();
-		int number1 = number.nextInt(100) + 0;
-
+		int number1 = number.nextInt(101);
+		System.out.println(number1);
+		
 		// Guess the number
 		System.out.println("Guess a number from 0 - 100");
 
